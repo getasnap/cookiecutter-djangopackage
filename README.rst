@@ -2,8 +2,8 @@
 Cookiecutter Django Package
 ===========================
 
-.. image:: https://travis-ci.org/pydanny/cookiecutter-djangopackage.svg?branch=master
-    :target: https://travis-ci.org/pydanny/cookiecutter-djangopackage
+.. image:: https://circleci.com/gh/getasnap/cookiecutter-djangopackage.svg?branch=master
+    :target: https://circleci.com/gh//getasnap/cookiecutter-djangopackage
 
 A cookiecutter_ template for creating reusable Django packages (installable apps) quickly.
 
