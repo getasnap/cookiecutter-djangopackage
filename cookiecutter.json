@@ -3,7 +3,7 @@
   "email": "you@example.com",
   "github_username": "yourname",
   "project_name": "Django Snap package name",
-  "repo_name": "{{ cookiecutter.project_name|lower|replace(' ', '-')|title()|replace('Django', 'dj') }}",
+  "repo_name": "{{ cookiecutter.project_name|lower|replace(' ', '-')|replace('django', 'dj') }}",
   "app_name": "{{ cookiecutter.repo_name|lower|replace(' ', '_')|replace('-', '_') }}",
   "app_config_name": "{{ cookiecutter.app_name.replace('_', ' ')|title()|replace(' ', '') }}Config",
   "project_short_description": "Your project description goes here",
