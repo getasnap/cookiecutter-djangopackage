@@ -69,7 +69,7 @@ Register on snapPyPI
 
 Once you've got at least a prototype working and tests running, it's time to register the app on snapPyPI::
 
-    python setup.py register
+    python setup.py register -r pypisnap
 
 
 Releasing on snapPyPI
@@ -86,7 +86,7 @@ Where `VERSION_NUMBER` is the current version, e.g. `0.1.0`.
 
 Then run::
 
-    $ python setup.py publish
+    $ python setup.py publish -r pypisnap
 
 It will answer with something like::
 
