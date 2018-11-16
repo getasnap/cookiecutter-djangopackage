@@ -63,7 +63,38 @@ Does the code actually work?
     source <YOURVIRTUALENV>/bin/activate
     (myenv) $ pip install tox
     (myenv) $ tox
+    
+Register on snapPyPI
+~~~~~~~~~~~~~~~~
 
+Once you've got at least a prototype working and tests running, it's time to register the app on snapPyPI::
+
+    python setup.py register
+
+
+Releasing on snapPyPI
+~~~~~~~~~~~~~~~~~
+
+Time to release a new version? Easy!
+
+First, use `bumpversion` to up the release number::
+
+    $ pip install bumpversion
+    $ bumpversion --current-version VERSION_NUMBER minor --config-file setup.cfg
+
+Where `VERSION_NUMBER` is the current version, e.g. `0.1.0`.
+
+Then run::
+
+    $ python setup.py publish
+
+It will answer with something like::
+
+    You probably want to also tag the version now:
+          git tag -a 0.1.0 -m 'version 0.1.0'
+          git push --tags
+
+Go ahead and follow those instructions.
 Credits
 -------
 
