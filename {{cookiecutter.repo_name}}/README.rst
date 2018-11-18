@@ -81,6 +81,9 @@ First, use `bumpversion` to up the release number::
 
     $ pip install bumpversion
     $ bumpversion --current-version VERSION_NUMBER minor --config-file setup.cfg
+                            or
+    $ bumpversion minor --config-file setup.cfg
+
 
 Where `VERSION_NUMBER` is the current version, e.g. `0.1.0`.
 
