@@ -86,7 +86,9 @@ Where `VERSION_NUMBER` is the current version, e.g. `0.1.0`.
 
 Then run::
 
-    $ python setup.py publish -r pypisnap
+    $ python setup.py sdist
+    $ twine upload dist/<package>-0.1.0.tar.gz  -r pypisnap
+
 
 It will answer with something like::
 
