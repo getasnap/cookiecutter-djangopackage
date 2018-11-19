@@ -81,7 +81,7 @@ First, use `bumpversion` to up the release number::
 
     $ pip install bumpversion
     $ bumpversion --current-version VERSION_NUMBER minor --config-file setup.cfg
-                            or
+        or
     $ bumpversion minor --config-file setup.cfg
 
 
@@ -90,7 +90,10 @@ Where `VERSION_NUMBER` is the current version, e.g. `0.1.0`.
 Then run::
 
     $ python setup.py sdist
-    $ twine upload dist/<package>-0.1.0.tar.gz  -r pypisnap
+    $ twine upload dist/{{ cookiecutter.repo_name }}-0.1.0.tar.gz  -r pypisnap
+        or
+    $ twine upload --skip-existing  dist/*  -r pypisnap
+
 
 
 It will answer with something like::
