@@ -32,7 +32,7 @@ def lint_files(changed_files):
 
     if '.py' in changed_extensions:
         py_files = filter_ext('.py', changed_files)
-        check_linter(['flake8', '--ignore=C901,E202,E124,E501,F403,W503'], py_files)
+        check_linter(['flake8'], py_files)
         check_linter(['isort', '-c'], py_files)
 
     if '.js' in changed_extensions:
