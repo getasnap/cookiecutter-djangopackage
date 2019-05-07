@@ -9,11 +9,8 @@ try:
 except ImportError:
     from distutils.core import setup
 
-{%- set license_classifiers = {
-    'Apache Software License 2.0': 'License :: OSI Approved :: Apache Software License',
-    'BSD': 'License :: OSI Approved :: BSD License',
-    'ISCL': 'License :: OSI Approved :: ISC License (ISCL)',
-    'MIT': 'License :: OSI Approved :: MIT License',
+{% - set license_classifiers = {
+    'Private': 'License :: Copyright Snap Travel Technology Ltd 2018',
 } %}
 
 
@@ -63,24 +60,18 @@ setup(
         '{{ cookiecutter.app_name }}',
     ],
     include_package_data=True,
-    install_requires=[{% if cookiecutter.models != "Comma-separated list of models" %}"django-model-utils>=2.0", {% endif %}],
-{%- if cookiecutter.open_source_license in license_classifiers %}
+    install_requires=[{% if cookiecutter.models != "Comma-separated list of models" % }"django-model-utils>=2.0", { % endif % }],
+    {% - if cookiecutter.open_source_license in license_classifiers % }
     license="{{ cookiecutter.open_source_license }}",
-{%- endif %}
+    {% - endif % }
     zip_safe=False,
     keywords='{{ cookiecutter.repo_name }}',
     classifiers=[
-        'Development Status :: 3 - Alpha',{% if '1.11' in cookiecutter.django_versions %}
-        'Framework :: Django :: 1.11',{% endif %}{% if '2.0' in cookiecutter.django_versions %}
-        'Framework :: Django :: 2.0',{% endif %}
+        'Framework :: Django :: 2.1',
         'Intended Audience :: Developers',
-        'License :: OSI Approved :: BSD License',
+        'License :: Copyright Snap Travel Technology Ltd 2018',
         'Natural Language :: English',
-        'Programming Language :: Python :: 2',
-        'Programming Language :: Python :: 2.7',
         'Programming Language :: Python :: 3',
-        'Programming Language :: Python :: 3.4',
-        'Programming Language :: Python :: 3.5',
         'Programming Language :: Python :: 3.6',
     ],
 )

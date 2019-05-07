@@ -122,14 +122,6 @@ will need to generate a token and pass it when submitting coverage.
 
 .. _CodeCov: https://codecov.io/
 
-Register on PyPI
-~~~~~~~~~~~~~~~~
-
-Once you've got at least a prototype working and tests running, it's time to register the app on PyPI::
-
-    python setup.py register -r pypisnap
-
-
 Releasing on PyPI
 ~~~~~~~~~~~~~~~~~
 
