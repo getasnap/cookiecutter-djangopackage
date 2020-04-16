@@ -60,10 +60,10 @@ setup(
         '{{ cookiecutter.app_name }}',
     ],
     include_package_data=True,
-    install_requires=[{% if cookiecutter.models != "Comma-separated list of models" % }"django-model-utils>=2.0", { % endif % }],
-    {% - if cookiecutter.open_source_license in license_classifiers % }
+    install_requires=[{% if cookiecutter.models != "Comma-separated list of models" %}"django-model-utils>=2.0", {% endif %}],
+    {% - if cookiecutter.open_source_license in license_classifiers %}
     license="{{ cookiecutter.open_source_license }}",
-    {% - endif % }
+    {% - endif %}
     zip_safe=False,
     keywords='{{ cookiecutter.repo_name }}',
     classifiers=[
