@@ -13,6 +13,6 @@
     "version": "0.0.1",
     "django_versions": "2.1",
     "open_source_license": ["MIT", "BSD", "ISCL", "Apache Software License 2.0", "Not open source"],
-    "setup_git_repo": ["Yes", "No"]
+    "setup_git_repo": ["Yes", "No"],
     "create_example_project": "N"
 }
