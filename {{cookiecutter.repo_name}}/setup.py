@@ -9,7 +9,7 @@ try:
 except ImportError:
     from distutils.core import setup
 
-{% - set license_classifiers = {
+{% set license_classifiers = {
     'Private': 'License :: Copyright Snap Travel Technology Ltd 2018',
 } %}
 
